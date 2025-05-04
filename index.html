@@ -12,6 +12,11 @@
             background-color: white;
         }
 
+        .date-hidden {
+    color: #0066cc;  /* Blue color for the masked date */
+    cursor: pointer;
+}
+
         .header {
             background-color: #b0141c;
             color: white;
@@ -187,8 +192,11 @@
                 <div class="label">Legal Sex</div>
                 <div>Male</div>
                 
+
                 <div class="label">Date of Birth</div>
-                <div>08/21/2001</div>
+                <div>
+                    <span id="dob" class="date-hidden" onclick="toggleDate(this)">08/21/****</span>
+                </div>
                 
                 <div class="label">Birth Country</div>
                 <div></div>
@@ -273,5 +281,18 @@
             If any of the information is wrong, contact your administrative office.
         </div>
     </div>
+
+
+    <script>
+    function toggleDate(element) {
+        if (element.textContent === "08/21/****") {
+            element.textContent = "08/21/2001";
+            element.style.color = "black";  // Changes to black when showing full date
+        } else {
+            element.textContent = "08/21/****";
+            element.style.color = "#0066cc";  // Changes back to blue when masked
+        }
+    }
+    </script>
 </body>
 </html>
