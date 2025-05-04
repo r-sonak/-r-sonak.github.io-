@@ -1,1 +1,213 @@
-<h1>hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demographic Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .header {
+            background-color: #9d2235;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-arrow {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        .goto-section {
+            position: absolute;
+            right: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .name-section {
+            margin-bottom: 15px;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 10px;
+        }
+
+        .nav-tab {
+            padding: 5px 15px;
+            background-color: #f0f4f8;
+            border: 1px solid #ccd5e1;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #446688;
+            cursor: pointer;
+        }
+
+        .nav-tab.active {
+            background-color: #e5eef9;
+        }
+
+        .breadcrumb {
+            font-size: 12px;
+            margin-bottom: 20px;
+            padding: 10px 0;
+        }
+
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+            padding: 0 5px;
+        }
+
+        .breadcrumb-item {
+            color: #446688;
+        }
+
+        .section-title {
+            color: #446688;
+            font-size: 14px;
+            padding: 5px 0;
+            border-bottom: 1px solid #ccd5e1;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 120px auto;
+            gap: 8px;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+
+        .label {
+            text-align: right;
+            color: #666;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .section-container {
+            margin-bottom: 20px;
+        }
+
+        /* New styles for profile photo */
+        .profile-photo {
+            width: 150px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="back-arrow">←</span>
+        <span class="title">Demographic Information</span>
+        <div class="goto-section">
+            Go To <select><option></option></select>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="name-section">
+            <div>Rohan Singh Sonakya</div>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active">Personal Information</button>
+            <button class="nav-tab">Security</button>
+            <button class="nav-tab">Participation</button>
+        </div>
+
+        <div class="breadcrumb">
+            <a href="#">Addresses</a> |
+            <a href="#">Names</a> |
+            <a href="#">Phone Numbers</a> |
+            <a href="#">Email Addresses</a> |
+            <a href="#">Emergency Contacts</a> |
+            <span class="breadcrumb-item">Demographic Information</span>
+        </div>
+
+        <div class="section-title">Demographic Information</div>
+
+        <div class="info-container">
+            <div class="info-grid">
+                <div class="label">ID</div>
+                <div>5561320</div>
+                
+                <div class="label">Legal Sex</div>
+                <div>Male</div>
+                
+                <div class="label">Date of Birth</div>
+                <div>08/21/2001</div>
+                
+                <div class="label">Birth Country</div>
+                <div></div>
+                
+                <div class="label">Birth State</div>
+                <div></div>
+                
+                <div class="label">Marital Status</div>
+                <div>Unknown</div>
+                
+                <div class="label">Military Status</div>
+                <div></div>
+            </div>
+            
+            <!-- Add your image here -->
+            <img src="your-image.jpg" alt="Profile Photo" class="profile-photo">
+        </div>
+
+        <!-- Rest of your code remains the same -->
+        
+        <!-- ... (rest of the sections) ... -->
+
+    </div>
+</body>
+</html>
