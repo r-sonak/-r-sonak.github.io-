@@ -13,7 +13,7 @@
         }
 
         .header {
-            background-color: #9d2235;
+            background-color: #b0141c;
             color: white;
             padding: 10px;
             display: flex;
@@ -21,20 +21,30 @@
             align-items: center;
         }
 
+
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+}
         .back-arrow {
             color: white;
             text-decoration: none;
             font-size: 24px;
-            margin-right: 10px;
-        }
-
-        .title {
-            font-size: 16px;
+            padding-right: 10px;
         }
 
         .goto-section {
             position: absolute;
             right: 20px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .goto-section select {
+            margin-left: 5px;
         }
 
         .container {
@@ -43,6 +53,7 @@
 
         .name-section {
             margin-bottom: 15px;
+            font-size: 14px;
         }
 
         .nav-tabs {
@@ -57,35 +68,26 @@
             border: 1px solid #ccd5e1;
             border-radius: 3px;
             font-size: 12px;
-            color: #446688;
-            cursor: pointer;
-        }
-
-        .nav-tab.active {
-            background-color: #e5eef9;
+            color: #476282;
         }
 
         .breadcrumb {
             font-size: 12px;
-            margin-bottom: 20px;
-            padding: 10px 0;
+            margin: 15px 0;
+            color: #476282;
         }
 
         .breadcrumb a {
             color: #0066cc;
             text-decoration: none;
-            padding: 0 5px;
         }
 
-        .breadcrumb-item {
-            color: #446688;
-        }
-
-        .section-title {
-            color: #446688;
-            font-size: 14px;
-            padding: 5px 0;
-            border-bottom: 1px solid #ccd5e1;
+        .main-title {
+            color: #476282;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 5px;
         }
 
         .info-grid {
@@ -101,6 +103,16 @@
             color: #666;
         }
 
+        .section-title {
+            color: #B85C38;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 0;
+            margin-top: 20px;
+            background-color: #f5f5f5;
+            padding: 5px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -109,13 +121,21 @@
         }
 
         th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #e6e6e6;
             padding: 5px;
             text-align: left;
         }
 
         th {
             background-color: #f5f5f5;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            border: 1px solid #ddd;
         }
 
         .footer-text {
@@ -125,58 +145,41 @@
             margin-top: 20px;
         }
 
-        .section-container {
-            margin-bottom: 20px;
-        }
-
-        /* New styles for profile photo */
-        .profile-photo {
-            width: 150px;
-            height: auto;
-            float: right;
-            margin-left: 20px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-        }
-
-        .info-container {
-            display: flex;
-            justify-content: space-between;
+        .lock-icon {
+            color: #666;
+            font-size: 12px;
+            margin-right: 5px;
         }
     </style>
 </head>
 <body>
+    
+
     <div class="header">
         <span class="back-arrow">←</span>
-        <span class="title">Demographic Information</span>
-        <div class="goto-section">
+        <span class="header-title">Demographic Information</span>
+        <span class="goto-section">
             Go To <select><option></option></select>
-        </div>
+        </span>
     </div>
 
     <div class="container">
-        <div class="name-section">
-            <div>Rohan Singh Sonakya</div>
-        </div>
+        <div class="name-section">Rohan Singh Sonakya</div>
 
         <div class="nav-tabs">
-            <button class="nav-tab active">Personal Information</button>
+            <button class="nav-tab">Personal Information</button>
             <button class="nav-tab">Security</button>
             <button class="nav-tab">Participation</button>
         </div>
 
         <div class="breadcrumb">
-            <a href="#">Addresses</a> |
-            <a href="#">Names</a> |
-            <a href="#">Phone Numbers</a> |
-            <a href="#">Email Addresses</a> |
-            <a href="#">Emergency Contacts</a> |
-            <span class="breadcrumb-item">Demographic Information</span>
+            <a href="#">Addresses</a> | <a href="#">Names</a> | <a href="#">Phone Numbers</a> | 
+            <a href="#">Email Addresses</a> | <a href="#">Emergency Contacts</a> | Demographic Information
         </div>
 
-        <div class="section-title">Demographic Information</div>
+        <div class="main-title">Demographic Information</div>
 
-        <div class="info-container">
+        <div style="display: flex; justify-content: space-between;">
             <div class="info-grid">
                 <div class="label">ID</div>
                 <div>5561320</div>
@@ -199,15 +202,76 @@
                 <div class="label">Military Status</div>
                 <div></div>
             </div>
-            
-            <!-- Add your image here -->
-            <img src="your-image.jpg" alt="Profile Photo" class="profile-photo">
+            <img src="images/Rohan_Sonakya_Headshot.JPG" alt="Profile Photo" class="profile-photo">
         </div>
 
-        <!-- Rest of your code remains the same -->
-        
-        <!-- ... (rest of the sections) ... -->
+        <div class="section-title">National Identification Number</div>
+        <table>
+            <tr>
+                <th>Country</th>
+                <th>National ID Type</th>
+                <th>National ID</th>
+            </tr>
+            <tr>
+                <td>United States</td>
+                <td>SSN</td>
+                <td>🔒 ***-**-5323</td>
+            </tr>
+        </table>
 
+        <div class="section-title">Ethnicity</div>
+        <table>
+            <tr>
+                <th>Ethnic Group</th>
+                <th>Description</th>
+                <th>Primary</th>
+            </tr>
+            <tr>
+                <td>INDIC</td>
+                <td>Indian</td>
+                <td>N</td>
+            </tr>
+        </table>
+
+        <div class="section-title">Citizenship Information</div>
+        <table>
+            <tr>
+                <th>Citizenship Status</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Citizen</td>
+                <td>United States</td>
+            </tr>
+        </table>
+
+        <div class="section-title">Driver's License</div>
+        <table>
+            <tr>
+                <th>License #</th>
+                <th>Country</th>
+                <th>State</th>
+            </tr>
+            <tr>
+                <td>799991159</td>
+                <td>United States</td>
+                <td>NY</td>
+            </tr>
+        </table>
+
+        <div class="section-title">Visa or Permit Data</div>
+        <table>
+            <tr>
+                <th>Visa/Permit Status</th>
+                <th>Status Date</th>
+                <th>Type</th>
+                <th>Country</th>
+            </tr>
+        </table>
+
+        <div class="footer-text">
+            If any of the information is wrong, contact your administrative office.
+        </div>
     </div>
 </body>
 </html>
